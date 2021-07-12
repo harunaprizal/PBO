@@ -1,0 +1,100 @@
+program yg digunakan adalah  Netbeans IDE 12.4, JDK vers 15.0.2, driver mysql connector.
+
+COONTROOLLER
+--IsiTable
+utk menampiilkan iisi tabel dari database
+
+
+KKONEKKSI
+-koneksi
+digunakkan utkk kkooneksi kke database
+
+
+MODEL
+-mTable
+diigunakan utk membaut variable model table yg nantinya akan dijadikakn list dan menampung data dari sql
+-tablesewabukku
+untuukk meembuat tampilan table dari table sql ke ui
+
+
+IDAO
+-IDAOsewabukku
+sebagaii interfaceee dari DAOsewabuku
+
+
+DAO
+-DAOsewabuku
+--getall
+mendapatkan isi dari database sewabuku.sql
+
+--InserNewData
+membuaut data baru piinjaman buuku baru mengammbiil tgl sekakkrang(saatt data diiiinput)
+
+--UpdateData
+mengupdate data pada data yg sudah di input sebelumnya.
+
+--DeleteData
+menghapus data yangg suudah ada.
+
+--GetTanggalHarusKembali
+utk menentukkan tgl harus kembali pada buku yg di inputkkan.
+
+--KembalikanBuku
+utk meenghiitung denda jiika terlammbat denggan cara menghiitung selisih tgl harus kembali dan tgl kemmbali.
+
+--UpdateTanggalKembaliBuku
+utk membuat tgl kemmbali jikka buiukku sudah diikkemmbalikan.
+
+
+GUI
+-maingui.java
+
+--jTable1MouseClicked
+utk mennddaatkkan id row, judul, dan tgl_kemmbali pada tablee yg diipilih
+
+--initComponents
+build in koommponen dari UI yang dibuat.
+
+--btn_simpanActionPerformed
+utkk menymmpan judul buuku yggg diinputkan.
+jiika iinputan kosoongg data tdk akan diiiinputkkan
+tangal harus kkeembalii akkan diitentukkan dari tgl sekakrang diitammbah 7 harii.
+jika data berhasil ditammbahkann akaknn mmennampilkan data berhasil diibuat.
+
+--btn_kembaliActionPerformed
+utk menggemmbalikan bukku dari id roow yangg diipiilih pada table.
+jika bukku berhasil dikkembalikkan akan tampil pesan Buku berhasil dikembalikan
+jika tiidakk ada row yg diipilih akkan ditammpilkkan pesan Tidak ada data yang terpilih.
+jika buku sudah diikembalikan akan keeluar pesan Buku sudah dikembalikan, pengecekkkan melalui apakahh sdah ada tgl dikkemmbalikan atau blm pada tabel.
+
+--btn_editActionPerformed
+utkk meenegdiit juudul bukku dari row yg dipiliih pada table.
+jiikka inputann kkosong akan tampiil pesan Input judul tidak boleh kosong.
+jiikka data bersahiil di ediit akan tampil pesan Data berhasil terupdate
+jiika bukku sudah dikemmbalikan makka tdk biisa diedit, akan tampiil pesan Buku sudah dikembalikan, data tidak dapat diedit, pengecekkkan melalui apakahh sdah ada tgl dikkemmbalikan atau blm pada tabel.
+jika tiidakk ada row yg diipilih akkan ditammpilkkan pesan Tidak ada data yang terpilih.
+
+--btn_deleteActionPerformed
+uutkk mengghapus data dengan mmengghapus datta pada row ygg dipiliih.
+jika tiidakk ada row yg diipilih akkan ditammpilkkan pesan Tidak ada data yang terpilih.
+
+
+line  418 - 425
+deklarasi variable
+cSewabuku = kontroller dariii sewa bkuu yg diigunakkan utk mmenammpilkkan isi table.
+simppledateformat formmat tanggal = utk membuat foormat tangggal sekkarang
+siimmpledateformmatt formmat jam = utklk foormat jam sekarang
+date tanggal = utkk mengambil tgl sekanarg
+int id_selected = utk mengambil id darii row pada table ygg dipiiliih
+str tgl_kembali_selecetted = utk mengecek apakah sudah dikembaslikan
+int biaya = meneentukkan biaiay seewa
+
+--fungsi waktu
+utk mengambiil tanggal dan jam sekkkarang untk diitampilkan kke UI
+
+--fuunggsi GetTabelData
+utkk mengambil variiable tabel
+
+--fugngsi CreateTable
+utk memmbuat tabel pada UI
+
